@@ -1,0 +1,31 @@
+{
+  "name": "my_first_flight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reygon33/My_First_Flight.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reygon33/My_First_Flight/issues"
+  },
+  "homepage": "https://github.com/Reygon33/My_First_Flight#readme",
+  "dependencies": {
+    "@wdio/cli": "^7.20.9",
+    "js-datepicker": "^5.18.0"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^7.20.9",
+    "@wdio/mocha-framework": "^7.20.7",
+    "@wdio/spec-reporter": "^7.20.8",
+    "chromedriver": "^104.0.0",
+    "wdio-chromedriver-service": "^7.3.2"
+  }
+}

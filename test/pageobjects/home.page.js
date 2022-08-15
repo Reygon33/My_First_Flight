@@ -1,5 +1,3 @@
-
-
 const Page = require('./page');
 
 class HomePage extends Page {
@@ -19,11 +17,7 @@ class HomePage extends Page {
     }
 
     get departureDate() {
-        return $('[data-test-id="departure-date-input"]');
-    }
-
-    get departureDay() {
-        return $('//div[@aria-label="Tue Aug 30 2022"]');
+        return $('input[data-test-id="departure-date-input"]');
     }
 
     get returnDateBtn() {
@@ -38,7 +32,7 @@ class HomePage extends Page {
     }
 
     get increasePassengersBtn() {
-        return $('.--increment')[0];
+        return $('div[data-test-id="passengers-adults-field"]  a.--increment')
     }
 
     get searchFlichtBtn() {
@@ -62,8 +56,8 @@ class HomePage extends Page {
     }
 
     async clickDepartureDate() {
+        await this.departureDate.waitForClickable({ timeout: 25000 });
         await this.departureDate.click();
-        //await this.departureDate.setValue(Date);
     }
 
     async clickPassengerBtn() {
@@ -79,7 +73,7 @@ class HomePage extends Page {
     }
 
     async selectDepartureDay(date){
-        return this.departureDay(date).click();
+        return $('//div[@aria-label="'+date+'"]').click();
     }
 
     async clickReturnDateBtn() {
@@ -89,9 +83,6 @@ class HomePage extends Page {
     async clickDontReturnBtn(){
         return this.dontReturnBtn.click();
     }
-
-
-
 
 
     open () {

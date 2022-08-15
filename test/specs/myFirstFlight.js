@@ -19,8 +19,8 @@ describe('My first flight to Berlin', () => {
         await HomePage.clickPassengerBtn();
         await HomePage.clickIncreasePassengersBtn();
         await HomePage.clickSearchFlichtBtn();
-
-        browser.switchWindow("https://www.aviasales.com/search");
+    
+        browser.switchWindow("NYC → BER");
         await expect(selectFlight.fromNY).toBeDisplayed();
         await expect(selectFlight.toBerlin).toBeDisplayed();
         await expect(selectFlight.flightDate).toBeDisplayed();

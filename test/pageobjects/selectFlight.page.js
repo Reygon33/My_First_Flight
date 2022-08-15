@@ -17,7 +17,7 @@ class SelectFlight extends Page {
     }
 
     get flightDate() {
-        return $('//div[@data-test-id="date" and text()="Tue, August 30"]');
+        return $('//div[@data-test-id="date" and text()="Tue, Aug 30"]');
     }
 }
 
